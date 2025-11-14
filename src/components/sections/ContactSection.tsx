@@ -4,7 +4,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 
 const ContactSection = () => {
   const [copied, setCopied] = useState(false);
-  const email = "etienne.mentrel@gmail.com";
+  const email = "yoannyamd@gmail.com";
   const { t, currentLanguage } = useLanguage();
 
   const handleCopyEmail = () => {
@@ -21,8 +21,8 @@ const ContactSection = () => {
 
   const emailBody =
     currentLanguage === "fr"
-      ? "Bonjour%20Etienne,%0D%0A%0D%0AJ'aimerais%20discuter%20d'un%20projet%20avec%20vous."
-      : "Hello%20Etienne,%0D%0A%0D%0AI'd%20like%20to%20discuss%20a%20project%20with%20you.";
+      ? "Bonjour%20Yoann,%0D%0A%0D%0AJ'aimerais%20discuter%20d'un%20projet%20avec%20vous."
+      : "Hello%20Yoann,%0D%0A%0D%0AI'd%20like%20to%20discuss%20a%20project%20with%20you.";
 
   return (
     <div className="container mx-auto px-6 py-12 text-center">
@@ -115,7 +115,7 @@ const ContactSection = () => {
 
                 <div className="mt-8 flex justify-center space-x-6">
                   <a
-                    href="https://github.com/H1B0B0"
+                    href="https://github.com/yamdev07"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white/70 hover:text-white transition-colors"
@@ -133,7 +133,7 @@ const ContactSection = () => {
                     </svg>
                   </a>
                   <a
-                    href="https://www.linkedin.com/in/etiennementrel/"
+                    href="https://www.linkedin.com/in/yoann-adigbonon-71b1a6295"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white/70 hover:text-white transition-colors"
