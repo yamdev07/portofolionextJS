@@ -15,8 +15,8 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-  // const [scrollY, setScrollY] = useState(0);
-  // const { t } = useLanguage();
+  const [scrollY, setScrollY] = useState(0);
+  const { t } = useLanguage();
 
   const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
   const lastUIUpdateTimeRef = useRef(0);
