@@ -1,4 +1,4 @@
-# Etienne Mentrel's Portfolio
+# Yoann yamd's Portfolio
 
 Welcome to my personal portfolio website, designed to showcase my skills, projects, and professional journey.
 
@@ -26,13 +26,13 @@ This website highlights my projects, professional and academic experiences, and 
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/H1B0B0/h1b0b0.github.io
+   git clone https://github.com/yamdev07/portofolionextJS.git
    ```
 
 2. Navigate to the repository:
 
    ```bash
-   cd h1b0b0.github.io
+   cd portofolionextJS
    ```
 
 3. Install the dependencies:
@@ -63,4 +63,4 @@ Feel free to get creative and tailor the website to your preferences.
 
 ## Contact
 
-For any inquiries or collaborations, please reach out to me at [etienne.mentrel@gmail.com](mailto:etienne.mentrel@gmail.com).
+For any inquiries or collaborations, please reach out to me at [yoannyamd@gmail.com](mailto:yoannyamd@gmail.com).
