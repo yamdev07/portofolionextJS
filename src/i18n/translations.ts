@@ -79,9 +79,9 @@ export const translations: { [key: string]: Translation } = {
       contact: "Contact",
     },
     intro: {
-      hello: "Hello, I'm Yoann",
+      hello: "Hello, I'm Yoann Yamd",
       titles: ["Full-Stack Developer", "Cybersecurity Enthusiast"],
-      description: "I build modern web and mobile applications.",
+      description: "I develop and deploy secure, high-performance, and modern web and mobile applications to manage clients, projects, and services, while integrating innovative solutions such as Twilio, FedaPay, and Flutter.",
       viewProjects: "View Projects",
       getInTouch: "Get In Touch",
     },

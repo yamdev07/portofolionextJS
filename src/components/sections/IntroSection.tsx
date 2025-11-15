@@ -77,7 +77,8 @@ const IntroSection = () => {
           className="flex flex-wrap justify-center gap-4"
         >
           <button
-            className="cosmic-button flex items-center gap-2"
+              className="cosmic-button flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white"
+
             onClick={() => {
               const projectsSection = document.getElementById("projects");
               if (projectsSection) {
