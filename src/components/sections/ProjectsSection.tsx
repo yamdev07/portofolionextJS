@@ -6,20 +6,24 @@ import Image from "next/image";
 const projects = [
   {
     id: 1,
-    title: "BibliothèqueApp",
+    title: "MoradaLodge",
     description:
-      "Application pour gérer une bibliothèque : suivi des livres, gestion des emprunts/retours, utilisateurs, gestion des administrateurs et intégration d'un système de chat en temps réel.",
-    image: "/images/projects/BibliothequeApp.png",
-    tech: ["Python", "Django", "MySQL", "Chat"],
-    link: "https://github.com/yamdev07/BibliothequeApp",
-    demo: undefined,
+      "Site web d'hôtel entièrement configuré avec QloApps, incluant un back-office pour gérer les réservations, les chambres et le contenu du site.",
+    image: "/images/projects/moradalodge.png",
+    tech: ["QloApps", "PHP", "MySQL", "Back-office"],
+    link: "https://github.com/yamdev07/MoradalodgeSite.git",
+    demo: "https://moradalodge.com",
+    extraButton: {
+      label: "Back Office",
+      url: "https://moradalodge.com/admin2025"
+    },
     featured: true,
   },
   {
     id: 2,
     title: "Site Vitrine AnyxTech",
     description:
-      "Site web professionnel responsive avec design moderne, optimisé pour les performances et le SEO.",
+    "Site web professionnel responsive avec design moderne, optimisé pour les performances et le SEO.",
     image: "/images/projects/anyxtech.png",
     tech: ["HTML/CSS", "JavaScript", "Tailwind CSS"],
     link: "https://anyxtech.com",
@@ -30,34 +34,34 @@ const projects = [
     id: 3,
     title: "Task Management System",
     description:
-      "Application complète de gestion de clientèle avec intégration Twilio API pour les notifications SMS et interface Bootstrap moderne. \n  NB:Cette application est déjà disponible en ligne, utilisée par la dite entreprise mais ne peut en aucun cas être divulguée au public.",
-      
+    "Application complète de gestion de clientèle avec intégration Twilio API pour les notifications SMS et interface Bootstrap moderne. \n  NB:Cette application est déjà disponible en ligne, utilisée par la dite entreprise mais ne peut en aucun cas être divulguée au public.",
+    
     image: "/images/projects/clients_manage.png",
     tech: ["Laravel", "Twilio API", "Bootstrap", "MySQL"],
     link: "https://github.com/yamdev07/TaskManagement",
-    demo: undefined,
+    demo: "http://clients.anyxtech.com",
     featured: true,
   },
   {
     id: 4,
     title: "CunicultureApp",
     description:
-      "Application de suivi et gestion de la production cunicole : suivi des lapins, gestion des naissances, alimentation, santé et productivité.",
+    "Application de suivi et gestion de la production cunicole : suivi des lapins, gestion des naissances, alimentation, santé et productivité.",
     image: "/images/projects/cuniculture.png",
     tech: ["PHP", "Laravel", "MVC", "MySQL"],
     link: "https://github.com/yamdev07/CunicultureApp",
-    demo: undefined,
+    demo: "http://cuni.anyxtech.com",
     featured: false,
   },
   {
     id: 5,
-    title: "MoradaLodge",
+    title: "BibliothèqueApp",
     description:
-      "Site web d'hôtel entièrement configuré avec QloApps, incluant un back-office pour gérer les réservations, les chambres et le contenu du site.",
-    image: "/images/projects/moradalodge.png",
-    tech: ["QloApps", "PHP", "MySQL", "Back-office"],
-    link: "http://moradalodge.com",
-    demo: "http://moradalodge.com/admin2025",
+      "Application pour gérer une bibliothèque : suivi des livres, gestion des emprunts/retours, utilisateurs, gestion des administrateurs et intégration d'un système de chat en temps réel.",
+    image: "/images/projects/BibliothequeApp.png",
+    tech: ["Python", "Django", "MySQL", "Chat"],
+    link: "https://github.com/yamdev07/library_management_system.git",
+    demo: undefined,
     featured: false,
   },
   {
@@ -65,7 +69,7 @@ const projects = [
     title: "FaceVisionPro",
     description:
       "WebApp de reconnaissance faciale et OCR - Plateforme avancée d'analyse faciale et de reconnaissance de texte utilisant l'intelligence artificielle de pointe.",
-    image: "/images/projects/FaceVisionPro.png",
+    image: "/images/projects/faceVision.png",
     tech: ["Python", "Deep Learning", "Streamlit", "OCR"],
     link: "https://github.com/yamdev07/ANIPChallenge2",
     demo: undefined,
@@ -76,7 +80,7 @@ const projects = [
     title: "QuincaillerieApp",
     description:
       "Application complète de gestion de quincaillerie permettant de suivre les ventes, gérer le stock et automatiser les factures clients. Interface utilisateur et administrateur intégrée.",
-    image: "/images/projects/QuincaillerieApp.png",
+    image: "/images/projects/quincaillerieApp.png",
     tech: ["Laravel", "Billing", "Bootstrap", "MySQL"],
     link: "https://github.com/yamdev07/quincaillerieApp",
     demo: undefined,
@@ -87,7 +91,7 @@ const projects = [
     title: "Wifizone - Portail Captif",
     description:
       "Création et configuration d'un portail captif pour Wifizone, permettant un accès sécurisé au réseau Wi-Fi, intégration Fedapay pour le paiement en ligne, avec gestion des sessions et authentification personnalisée.",
-    image: "/images/projects/WifizonePortailCaptif.png",
+    image: "/images/projects/wifizone.png",
     tech: ["Wi-Fi", "Portail Captif", "Fedapay", "Sécurité"],
     link: "https://wifihostpo.netlify.app/",
     demo: "https://wifihostpo.netlify.app/",
@@ -122,24 +126,22 @@ const ProjectsSection = () => {
 
           <div className="flex justify-center gap-4 mt-6">
             <button
-              className={`px-4 py-2 rounded-full transition ${
-                filter === "all"
+              className={`px-4 py-2 rounded-full transition ${filter === "all"
                   ? "bg-white/10 text-white"
                   : "bg-transparent text-gray-400 hover:text-white"
-              }`}
+                }`}
               onClick={() => setFilter("all")}
             >
               Tous
             </button>
             <button
-              className={`px-4 py-2 rounded-full transition ${
-                filter === "featured"
+              className={`px-4 py-2 rounded-full transition ${filter === "featured"
                   ? "bg-white/10 text-white"
                   : "bg-transparent text-gray-400 hover:text-white"
-              }`}
+                }`}
               onClick={() => setFilter("featured")}
             >
-              Featured
+              A la une
             </button>
           </div>
         </motion.div>
@@ -168,7 +170,7 @@ const ProjectsSection = () => {
 
                 {project.featured && (
                   <div className="absolute top-2 right-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                    Featured
+                    A la une
                   </div>
                 )}
               </div>
@@ -208,6 +210,17 @@ const ProjectsSection = () => {
                       Démo
                     </a>
                   )}
+                  {project.extraButton && (
+                    <a
+                      href={project.extraButton.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm bg-white/5 hover:bg-white/10 text-white border border-purple-400/30 rounded-full px-3 py-1 transition flex items-center gap-1"
+                    >
+                      {project.extraButton.label}
+                    </a>
+                  )}
+
                 </div>
               </div>
             </motion.div>
