@@ -20,7 +20,7 @@ const projects = [
     title: "Site Vitrine AnyxTech",
     description:
       "Site web professionnel responsive avec design moderne, optimisé pour les performances et le SEO.",
-    image: "/images/projects/SiteVitrineAnyxTech.png",
+    image: "/images/projects/anyxtech.png",
     tech: ["HTML/CSS", "JavaScript", "Tailwind CSS"],
     link: "https://anyxtech.com",
     demo: "https://anyxtech.com",
@@ -32,7 +32,7 @@ const projects = [
     description:
       "Application complète de gestion de clientèle avec intégration Twilio API pour les notifications SMS et interface Bootstrap moderne. \n  NB:Cette application est déjà disponible en ligne, utilisée par la dite entreprise mais ne peut en aucun cas être divulguée au public.",
       
-    image: "/images/projects/TaskManagementSystem.png",
+    image: "/images/projects/clients_manage.png",
     tech: ["Laravel", "Twilio API", "Bootstrap", "MySQL"],
     link: "https://github.com/yamdev07/TaskManagement",
     demo: undefined,
@@ -43,7 +43,7 @@ const projects = [
     title: "CunicultureApp",
     description:
       "Application de suivi et gestion de la production cunicole : suivi des lapins, gestion des naissances, alimentation, santé et productivité.",
-    image: "/images/projects/CunicultureApp.png",
+    image: "/images/projects/cuniculture.png",
     tech: ["PHP", "Laravel", "MVC", "MySQL"],
     link: "https://github.com/yamdev07/CunicultureApp",
     demo: undefined,
@@ -54,7 +54,7 @@ const projects = [
     title: "MoradaLodge",
     description:
       "Site web d'hôtel entièrement configuré avec QloApps, incluant un back-office pour gérer les réservations, les chambres et le contenu du site.",
-    image: "/images/projects/MoradaLodge.png",
+    image: "/images/projects/moradalodge.png",
     tech: ["QloApps", "PHP", "MySQL", "Back-office"],
     link: "http://moradalodge.com",
     demo: "http://moradalodge.com/admin2025",
