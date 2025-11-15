@@ -64,6 +64,8 @@ export interface Translation {
       all: string;
       frontend: string;
       backend: string;
+      mobile:  string;
+      apis: string; // <-- ajouté
       tools: string;
       cloud: string;
     };
@@ -94,15 +96,13 @@ export const translations: { [key: string]: Translation } = {
       contact: "Contact Me",
     },
     intro: {
-      hello: "Hi, I'm yamdev07",
+      hello: "Hi, I'm Yoann Yamd",
       titles: [
-        "DevOps Engineer",
-        "Software Developer",
-        "Web developer",
-        "Lifelong Learner",
+        "Fullstack and web developer",
+        "Network Engineer",
       ],
       description:
-        "Welcome to my cosmic portfolio. Dive into my universe of projects and see how I blend creativity and technology to craft stellar digital experiences.",
+        "Welcome to my cosmic portfolio. Explore my projects and see how I blend creativity and technology to create unique digital experiences",
       viewProjects: "Explore Projects",
       getInTouch: "Contact Me",
     },
@@ -110,7 +110,7 @@ export const translations: { [key: string]: Translation } = {
       title: "About Me",
       background: "My Journey",
       paragraph1:
-        "I started my professional journey right after high school, joining an apprenticeship program at a company specializing in RFID technology.",
+        "I started my professional career right after high school by joining an apprenticeship program at a company specializing in RFID technology.",
       paragraph2:
         "Initially trained as a higher-level technician, I discovered my passion for programming on the job, learning Python and taking on numerous projects that transitioned me into a developer role.",
       paragraph3:
@@ -168,6 +168,8 @@ export const translations: { [key: string]: Translation } = {
         all: "All Skills",
         frontend: "Frontend Development",
         backend: "Backend Development",
+        mobile: "Mobile Development",
+        apis: "APIs & Integrations",
         tools: "Development Tools",
         cloud: "Cloud Technologies",
       },

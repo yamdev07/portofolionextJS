@@ -9,45 +9,60 @@ interface Skill {
   icon?: string;
 }
 
+// Tes compétences réelles
 const skills: Skill[] = [
   // Frontend
   { name: "HTML/CSS", level: 5, category: "Frontend" },
   { name: "JavaScript", level: 4, category: "Frontend" },
   { name: "TypeScript", level: 4, category: "Frontend" },
-  { name: "React", level: 4, category: "Frontend" },
+  { name: "Next.js", level: 4, category: "Frontend" },
   { name: "Tailwind CSS", level: 5, category: "Frontend" },
+  { name: "Bootstrap", level: 5, category: "Frontend" },
+  { name: "UI/UX Design", level: 4, category: "Frontend" },
 
   // Backend
-  { name: "NestJS", level: 4, category: "Backend" },
-  { name: "MongoDB", level: 5, category: "Backend" },
-  { name: "PostgreSQL", level: 5, category: "Backend" },
-  { name: "Golang", level: 2, category: "Backend" },
+  { name: "PHP", level: 5, category: "Backend" },
+  { name: "Laravel", level: 5, category: "Backend" },
+  { name: "Node.js", level: 3, category: "Backend" },
+  { name: "Firebase Functions", level: 3, category: "Backend" },
+  { name: "Python", level: 4, category: "Backend" },
+  { name: "MySQL", level: 5, category: "Backend" },
+  { name: "Firestore", level: 3, category: "Backend" },
+
+  // Mobile
+  { name: "Flutter", level: 5, category: "Mobile" },
+  { name: "Dart", level: 4, category: "Mobile" },
+
+  // Cloud / DevOps
+  { name: "Firebase", level: 4, category: "Cloud" },
+  { name: "Docker", level: 5, category: "Cloud" },
+  { name: "CI/CD", level: 5, category: "Cloud" },
 
   // Tools
   { name: "Git", level: 5, category: "Tools" },
-  { name: "Docker", level: 5, category: "Tools" },
-  { name: "CI/CD", level: 5, category: "Tools" },
   { name: "Linux", level: 4, category: "Tools" },
-  { name: "Kubernetes", level: 4, category: "Tools" },
+  { name: "VS Code", level: 5, category: "Tools" },
 
-  // Cloud
-  { name: "AWS", level: 4, category: "Cloud" },
-  { name: "Scaleway", level: 3, category: "Cloud" },
+  // Payments & APIs
+  { name: "FedaPay", level: 4, category: "APIs" },
+  { name: "Checkout.js", level: 4, category: "APIs" },
+  { name: "Infobip WhatsApp API", level: 4, category: "APIs" },
 ];
 
-const categories = ["All", "Frontend", "Backend", "Tools", "Cloud"];
+const categories = ["All", "Frontend", "Backend", "Mobile", "Cloud", "Tools", "APIs"];
 
 const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const { t } = useLanguage();
 
-  // Mapping des catégories pour les traductions
   const categoryMapping: { [key: string]: string } = {
     All: t.skills.categories.all,
     Frontend: t.skills.categories.frontend,
     Backend: t.skills.categories.backend,
-    Tools: t.skills.categories.tools,
+    Mobile: t.skills.categories.mobile || "Mobile",
     Cloud: t.skills.categories.cloud,
+    Tools: t.skills.categories.tools,
+    APIs: t.skills.categories.apis || "APIs",
   };
 
   const filteredSkills = skills.filter(
@@ -93,7 +108,9 @@ const SkillsSection = () => {
               </div>
               <div>
                 <h4 className="text-lg font-bold">{skill.name}</h4>
-                <p className="text-sm text-gray-400">{categoryMapping[skill.category] || skill.category}</p>
+                <p className="text-sm text-gray-400">
+                  {categoryMapping[skill.category] || skill.category}
+                </p>
               </div>
             </div>
             <div className="h-2 bg-white/10 rounded-full overflow-hidden">

@@ -1,51 +1,37 @@
 "use client";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/i18n/LanguageContext"; // <-- ton hook pour traductions
 
 const IntroSection = () => {
+  const { t } = useLanguage(); // récupère la langue courante
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Only render animations on the client side
   if (!mounted) {
     return <div className="w-full h-full flex items-center justify-center" />;
   }
 
   return (
     <div className="relative w-full flex flex-col items-center justify-center text-center pb-12 md:pb-0 z-10">
-      {/* Animated cosmic elements - avec z-index contrôlé */}
+      {/* Animated cosmic elements */}
       <motion.div
         className="absolute w-40 h-40 rounded-full bg-gradient-to-br from-purple-700/30 to-transparent blur-2xl z-0"
-        animate={{
-          x: [0, 20, 0],
-          opacity: [0.4, 0.6, 0.4],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
+        animate={{ x: [0, 20, 0], opacity: [0.4, 0.6, 0.4] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         style={{ top: "10%", left: "15%" }}
       />
-
       <motion.div
         className="absolute w-52 h-52 rounded-full bg-gradient-to-bl from-blue-500/20 to-transparent blur-3xl z-0"
-        animate={{
-          x: [0, -30, 0],
-          opacity: [0.3, 0.5, 0.3],
-        }}
-        transition={{
-          duration: 13,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
+        animate={{ x: [0, -30, 0], opacity: [0.3, 0.5, 0.3] }}
+        transition={{ duration: 13, repeat: Infinity, ease: "easeInOut" }}
         style={{ bottom: "20%", right: "10%" }}
       />
 
-      {/* Main content with staggered animations - z-index plus élevé */}
+      {/* Main content */}
       <div className="z-20 relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -55,7 +41,7 @@ const IntroSection = () => {
         >
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-              Bonjour, je suis Yoann Yamd
+              {t.intro.hello}
             </span>
           </h1>
         </motion.div>
@@ -67,7 +53,7 @@ const IntroSection = () => {
         >
           <h2 className="text-2xl md:text-4xl font-medium mb-6 md:mb-8 text-white/80">
             <TypewriterEffect
-              phrases={["Développeur Fullstack", "Ingénieur Réseau"]}
+              phrases={t.intro.titles}
               typingSpeed={100}
               deletingSpeed={80}
               delayBetweenPhrases={2000}
@@ -81,7 +67,7 @@ const IntroSection = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="max-w-2xl text-lg md:text-xl text-gray-300 mb-10 mx-auto"
         >
-          Bienvenue dans mon portfolio cosmique. Découvrez mes projets et voyez comment je marie créativité et technologie pour créer des expériences numériques uniques.
+          {t.intro.description}
         </motion.p>
 
         <motion.div
@@ -99,7 +85,7 @@ const IntroSection = () => {
               }
             }}
           >
-            <span>Voir mes Projets</span>
+            <span>{t.intro.viewProjects}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -114,18 +100,8 @@ const IntroSection = () => {
             </svg>
           </button>
 
-          <a
-            href="#contact"
-            className="cosmic-button"
-            onClick={(e) => {
-              e.preventDefault();
-              const contactSection = document.getElementById("contact");
-              if (contactSection) {
-                contactSection.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
-          >
-            Contactez-moi
+          <a href="tel:+2290190422588" className="cosmic-button">
+            {t.intro.getInTouch}
           </a>
         </motion.div>
       </div>
@@ -140,7 +116,6 @@ interface TypewriterEffectProps {
   delayBetweenPhrases?: number;
 }
 
-// Simple typewriter effect component
 const TypewriterEffect = ({
   phrases,
   typingSpeed = 150,
