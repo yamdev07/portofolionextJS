@@ -27,32 +27,15 @@ export interface Translation {
     description: string;
     allProjects: string;
     featured: string;
-    viewCode: string;
-    demo: string;
     projectsList: {
-      eclatShop: {
+      [key: string]: {
         title: string;
         description: string;
-      };
-      timeManager: {
-        title: string;
-        description: string;
-      };
-      kuramaChat: {
-        title: string;
-        description: string;
-      };
-      rogueLike: {
-        title: string;
-        description: string;
-      };
-      twitchViewerBot: {
-        title: string;
-        description: string;
-      };
-      kickViewerBot: {
-        title: string;
-        description: string;
+        tech?: string[];
+        link?: string;
+        demo?: string;
+        extraButton?: { label: string; url: string };
+        featured?: boolean;
       };
     };
   };
@@ -64,8 +47,8 @@ export interface Translation {
       all: string;
       frontend: string;
       backend: string;
-      mobile:  string;
-      apis: string; // <-- ajouté
+      mobile: string;
+      apis: string;
       tools: string;
       cloud: string;
     };
@@ -90,101 +73,133 @@ export const translations: { [key: string]: Translation } = {
   en: {
     navigation: {
       home: "Home",
-      about: "About Me",
-      projects: "My Projects",
-      skills: "My Skills",
-      contact: "Contact Me",
+      about: "About",
+      projects: "Projects",
+      skills: "Skills",
+      contact: "Contact",
     },
     intro: {
-      hello: "Hi, I'm Yoann Yamd",
-      titles: [
-        "Fullstack and web developer",
-        "Network Engineer",
-      ],
-      description:
-        "Welcome to my cosmic portfolio. Explore my projects and see how I blend creativity and technology to create unique digital experiences",
-      viewProjects: "Explore Projects",
-      getInTouch: "Contact Me",
+      hello: "Hello, I'm Yoann",
+      titles: ["Full-Stack Developer", "Cybersecurity Enthusiast"],
+      description: "I build modern web and mobile applications.",
+      viewProjects: "View Projects",
+      getInTouch: "Get In Touch",
     },
     about: {
       title: "About Me",
       background: "My Journey",
       paragraph1:
-        "I started my professional career right after high school by joining an apprenticeship program at a company specializing in RFID technology.",
+        "I am a Full-Stack Developer passionate about creating robust, secure, and modern solutions.",
       paragraph2:
-        "Initially trained as a higher-level technician, I discovered my passion for programming on the job, learning Python and taking on numerous projects that transitioned me into a developer role.",
+        "Trained in web and mobile development with Flutter, Laravel, and Django, I design innovative applications with a project-driven mindset.",
       paragraph3:
-        "After earning my DUT in Electrical Engineering and Industrial Computing, I pursued my passion for programming at Epitech. Now, as an MSc 1 student, I continue to expand my skills and knowledge.",
+        "Currently pursuing a Master’s in Cybersecurity, I combine development expertise with a strong focus on software security.",
       downloadResume: "Download My Resume",
       githubProfile: "Visit My GitHub",
     },
     projects: {
       title: "My Projects",
       description:
-        "Take a look at my recent work and personal projects. Each one reflects a unique challenge and a valuable learning experience.",
+        "Here are some of the real projects I have developed professionally or personally. Each one demonstrates technologies used and links to code or demo when possible.",
       allProjects: "All Projects",
-      featured: "Highlighted",
-      viewCode: "View Code",
-      demo: "Live Demo",
+      featured: "Featured",
       projectsList: {
-        eclatShop: {
-          title: "Eclat Shop",
+        moradaLodge: {
+          title: "MoradaLodge",
           description:
-            "A powerful e-commerce platform for selling computer components. Built with Symfony, React, TypeScript, and Docker, it delivers a seamless user experience.",
+            "Hotel website fully configured with QloApps, including a back-office to manage bookings, rooms and content.",
+          tech: ["QloApps", "PHP", "MySQL", "Back-office"],
+          link: "https://github.com/yamdev07/MoradalodgeSite.git",
+          demo: "https://moradalodge.com",
+          extraButton: { label: "Back Office", url: "https://moradalodge.com/admin2025" },
+          featured: true,
         },
-        timeManager: {
-          title: "Time Manager",
+        anyxTech: {
+          title: "AnyxTech Showcase",
           description:
-            "A time tracking app designed for municipal employees to efficiently manage their work hours. It offers tools for employees, managers, and general oversight.",
+            "Professional responsive website with modern design, optimized for performance and SEO.",
+          tech: ["HTML/CSS", "JavaScript", "Tailwind CSS"],
+          link: "https://anyxtech.com",
+          demo: "https://anyxtech.com",
+          featured: true,
         },
-        kuramaChat: {
-          title: "Kurama Chat",
+        taskManagement: {
+          title: "Task Management System",
           description:
-            "An IRC client and server built with Node.js, Express.js, and React.js. Features include multi-channel support, real-time messaging, and user notifications.",
+            "Client management application with Twilio API integration for notifications. Confidential production app used internally by AnyxTech.",
+          tech: ["Laravel", "Twilio API", "Bootstrap", "MySQL"],
+          link: "https://github.com/yamdev07/TaskManagement",
+          demo: "http://clients.anyxtech.com",
+          featured: true,
         },
-        rogueLike: {
-          title: "Rogue-like in Java",
+        cunicultureApp: {
+          title: "CunicultureApp",
           description:
-            "An immersive Rogue-like game developed in two weeks using LibGDX. It features dynamic maps, real-time combat, and inventory management.",
+            "Rabbit farm management system: track births, feeding, health and productivity.",
+          tech: ["PHP", "Laravel", "MVC", "MySQL"],
+          link: "https://github.com/yamdev07/CunicultureApp",
+          demo: "http://cuni.anyxtech.com",
+          featured: false,
         },
-        twitchViewerBot: {
-          title: "Twitch Viewer-Bot",
+        libraryApp: {
+          title: "Library Management",
           description:
-            "A GUI tool to generate fake viewers for Twitch streams. Developed in Python, it uses proxies to simulate views.",
+            "Library management system with book tracking, borrow/return, users and real-time chat.",
+          tech: ["Python", "Django", "MySQL", "Chat"],
+          link: "https://github.com/yamdev07/library_management_system.git",
+          featured: false,
         },
-        kickViewerBot: {
-          title: "Kick Viewer-Bot",
+        faceVisionPro: {
+          title: "FaceVisionPro",
           description:
-            "A similar tool to Twitch Viewer-Bot, designed for the Kick platform. It generates fake views using proxies.",
+            "WebApp for facial recognition and OCR using AI technologies.",
+          tech: ["Python", "Deep Learning", "Streamlit", "OCR"],
+          link: "https://github.com/yamdev07/ANIPChallenge2",
+          featured: false,
+        },
+        quincaillerieApp: {
+          title: "QuincaillerieApp",
+          description:
+            "Full hardware store management system with stock, sales, invoices, and admin interface.",
+          tech: ["Laravel", "Billing", "Bootstrap", "MySQL"],
+          link: "https://github.com/yamdev07/quincaillerieApp",
+          featured: false,
+        },
+        wifizone: {
+          title: "Wifizone Captive Portal",
+          description:
+            "Captive portal for secure Wi-Fi access with Fedapay integration, session management, and authentication.",
+          tech: ["Wi-Fi", "Captive Portal", "Fedapay", "Security"],
+          link: "https://wifihostpo.netlify.app/",
+          demo: "https://wifihostpo.netlify.app/",
+          featured: false,
         },
       },
     },
     skills: {
       title: "My Skills",
-      description:
-        "These are the tools and technologies I use to bring ideas to life. My skillset is ever-growing as I explore new challenges.",
-      seeInAction: "See My Skills in Action",
+      description: "Technologies I work with and tools I master.",
+      seeInAction: "See in Action",
       categories: {
-        all: "All Skills",
-        frontend: "Frontend Development",
-        backend: "Backend Development",
-        mobile: "Mobile Development",
-        apis: "APIs & Integrations",
-        tools: "Development Tools",
-        cloud: "Cloud Technologies",
+        all: "All",
+        frontend: "Frontend",
+        backend: "Backend",
+        mobile: "Mobile",
+        apis: "APIs",
+        tools: "Tools",
+        cloud: "Cloud",
       },
     },
     contact: {
-      title: "Get in Touch",
-      description:
-        "Have a project in mind? Let's collaborate and create something extraordinary together.",
-      sendEmail: "Send Me an Email",
-      copyEmail: "Or copy my email address:",
-      emailCopied: "Email address copied!",
+      title: "Contact Me",
+      description: "Let's get in touch!",
+      sendEmail: "Send Email",
+      copyEmail: "Copy Email",
+      emailCopied: "Email copied to clipboard!",
     },
     footer: {
-      copyright: "© {year} Etienne Mentrel | Cosmic Portfolio",
-      madeWith: "Built with Next.js and a sprinkle of cosmic magic ✨",
+      copyright: "© 2025 Yoann Yamd. All rights reserved.",
+      madeWith: "Made with ❤️ using Next.js & Tailwind CSS",
     },
     common: {
       loading: "Loading...",
@@ -193,101 +208,133 @@ export const translations: { [key: string]: Translation } = {
   fr: {
     navigation: {
       home: "Accueil",
-      about: "À propos de moi",
-      projects: "Mes Projets",
-      skills: "Mes Compétences",
-      contact: "Me Contacter",
+      about: "À propos",
+      projects: "Projets",
+      skills: "Compétences",
+      contact: "Contact",
     },
     intro: {
-      hello: "Bonjour, je suis Etienne Mentrel",
-      titles: [
-        "Ingénieur DevOps",
-        "Développeur Logiciel",
-        "Passionné de Technologie",
-        "Apprenant Curieux",
-      ],
-      description:
-        "Bienvenue dans mon portfolio cosmique. Découvrez mes projets et voyez comment je marie créativité et technologie pour créer des expériences numériques uniques.",
-      viewProjects: "Voir mes Projets",
-      getInTouch: "Contactez-moi",
+      hello: "Bonjour, je suis Yoann yamd",
+      titles: ["Développeur Full-Stack", "Ingénieur Cybersécurité"],
+      description: "Je développe et déploie des applications web et mobiles sécurisées, performantes et modernes pour gérer des clients, des projets et des services, tout en intégrant des solutions innovantes comme Twilio, Fedapay et Flutter.",
+      viewProjects: "Voir les Projets",
+      getInTouch: "Me Contacter",
     },
     about: {
       title: "À propos de moi",
       background: "Mon Parcours",
       paragraph1:
-        "J'ai débuté ma carrière professionnelle juste après le lycée, en intégrant un programme d'apprentissage dans une entreprise spécialisée en technologie RFID.",
+        "Je suis un développeur Full-Stack passionné par la création de solutions robustes, sécurisées et modernes.",
       paragraph2:
-        "Formé initialement comme technicien supérieur, j'ai découvert ma passion pour la programmation en apprenant Python sur le terrain, ce qui m'a permis de devenir développeur au sein de l'entreprise.",
+        "Formé au développement web et mobile avec Flutter, Laravel et Django, je conçois des applications innovantes avec une approche orientée projet.",
       paragraph3:
-        "Après avoir obtenu mon DUT en Génie Électrique et Informatique Industrielle, j'ai poursuivi ma passion pour la programmation à Epitech. Aujourd'hui, en MSc 1, je continue d'élargir mes compétences et mes connaissances.",
+        "Actuellement en Master de Cybersécurité, je combine expertise en développement et forte attention à la sécurité logicielle.",
       downloadResume: "Télécharger mon CV",
       githubProfile: "Voir mon GitHub",
     },
     projects: {
       title: "Mes Projets",
       description:
-        "Découvrez mes travaux récents et projets personnels. Chaque projet représente un défi unique et une opportunité d'apprentissage.",
-      allProjects: "Tous les Projets",
+        "Voici quelques projets que j'ai réellement développés, professionnellement ou personnellement. Chaque projet montre les technologies utilisées et les liens disponibles.",
+      allProjects: "Tous",
       featured: "À la Une",
-      viewCode: "Voir le Code",
-      demo: "Voir la Démo",
       projectsList: {
-        eclatShop: {
-          title: "Eclat Shop",
+        moradaLodge: {
+          title: "MoradaLodge",
           description:
-            "Une plateforme e-commerce performante pour la vente de composants informatiques. Développée avec Symfony, React, TypeScript et Docker, elle offre une expérience utilisateur fluide.",
+            "Site web d'hôtel entièrement configuré avec QloApps, incluant un back-office pour gérer les réservations, les chambres et le contenu du site.",
+          tech: ["QloApps", "PHP", "MySQL", "Back-office"],
+          link: "https://github.com/yamdev07/MoradalodgeSite.git",
+          demo: "https://moradalodge.com",
+          extraButton: { label: "Back Office", url: "https://moradalodge.com/admin2025" },
+          featured: true,
         },
-        timeManager: {
-          title: "Time Manager",
+        anyxTech: {
+          title: "Site Vitrine AnyxTech",
           description:
-            "Une application de gestion du temps conçue pour les employés municipaux, leur permettant de gérer efficacement leurs heures de travail. Elle propose des outils pour les employés, les managers et la supervision générale.",
+            "Site web professionnel responsive avec design moderne, optimisé pour les performances et le SEO.",
+          tech: ["HTML/CSS", "JavaScript", "Tailwind CSS"],
+          link: "https://anyxtech.com",
+          demo: "https://anyxtech.com",
+          featured: true,
         },
-        kuramaChat: {
-          title: "Kurama Chat",
+        taskManagement: {
+          title: "Task Management System",
           description:
-            "Un client et serveur IRC développé avec Node.js, Express.js et React.js. Il inclut la gestion multi-canaux, la messagerie en temps réel et les notifications utilisateur.",
+            "Application de gestion de clientèle avec intégration de Twilio API pour les notifications. Application confidentielle utilisée en production par AnyxTech.",
+          tech: ["Laravel", "Twilio API", "Bootstrap", "MySQL"],
+          link: "https://github.com/yamdev07/TaskManagement",
+          demo: "http://clients.anyxtech.com",
+          featured: true,
         },
-        rogueLike: {
-          title: "Rogue-like en Java",
+        cunicultureApp: {
+          title: "CunicultureApp",
           description:
-            "Un jeu Rogue-like immersif développé en deux semaines avec LibGDX. Il propose des cartes dynamiques, des combats en temps réel et une gestion d'inventaire.",
+            "Application de suivi et gestion de lapins : naissances, alimentation, santé et productivité.",
+          tech: ["PHP", "Laravel", "MVC", "MySQL"],
+          link: "https://github.com/yamdev07/CunicultureApp",
+          demo: "http://cuni.anyxtech.com",
+          featured: false,
         },
-        twitchViewerBot: {
-          title: "Twitch Viewer-Bot",
+        libraryApp: {
+          title: "BibliothèqueApp",
           description:
-            "Un outil GUI pour générer de faux spectateurs sur Twitch. Développé en Python, il utilise des proxies pour simuler des vues.",
+            "Application de gestion d'une bibliothèque avec suivi des livres, emprunts/retours, utilisateurs et chat en temps réel.",
+          tech: ["Python", "Django", "MySQL", "Chat"],
+          link: "https://github.com/yamdev07/library_management_system.git",
+          featured: false,
         },
-        kickViewerBot: {
-          title: "Kick Viewer-Bot",
+        faceVisionPro: {
+          title: "FaceVisionPro",
           description:
-            "Un outil similaire à Twitch Viewer-Bot, conçu pour la plateforme Kick. Il génère de faux spectateurs en utilisant des proxies.",
+            "WebApp de reconnaissance faciale et OCR utilisant l'intelligence artificielle.",
+          tech: ["Python", "Deep Learning", "Streamlit", "OCR"],
+          link: "https://github.com/yamdev07/ANIPChallenge2",
+          featured: false,
+        },
+        quincaillerieApp: {
+          title: "QuincaillerieApp",
+          description:
+            "Application complète de gestion de quincaillerie avec stock, ventes, factures et interface administrateur.",
+          tech: ["Laravel", "Billing", "Bootstrap", "MySQL"],
+          link: "https://github.com/yamdev07/quincaillerieApp",
+          featured: false,
+        },
+        wifizone: {
+          title: "Wifizone - Portail Captif",
+          description:
+            "Portail captif pour un accès sécurisé au Wi-Fi, intégration Fedapay, gestion des sessions et authentification.",
+          tech: ["Wi-Fi", "Portail Captif", "Fedapay", "Sécurité"],
+          link: "https://wifihostpo.netlify.app/",
+          demo: "https://wifihostpo.netlify.app/",
+          featured: false,
         },
       },
     },
     skills: {
       title: "Mes Compétences",
-      description:
-        "Voici les outils et technologies que j'utilise pour donner vie à mes idées. Mon expertise s'élargit constamment au fil des défis.",
-      seeInAction: "Voir mes Compétences en Action",
+      description: "Technologies que je maîtrise et outils que j'utilise.",
+      seeInAction: "Voir en Action",
       categories: {
-        all: "Toutes les Compétences",
-        frontend: "Développement Frontend",
-        backend: "Développement Backend",
-        tools: "Outils de Développement",
-        cloud: "Technologies Cloud",
+        all: "Tous",
+        frontend: "Frontend",
+        backend: "Backend",
+        mobile: "Mobile",
+        apis: "APIs",
+        tools: "Outils",
+        cloud: "Cloud",
       },
     },
     contact: {
       title: "Contactez-moi",
-      description:
-        "Vous avez un projet en tête ? Collaborons et créons ensemble quelque chose d'extraordinaire.",
-      sendEmail: "Envoyez-moi un Email",
-      copyEmail: "Ou copiez mon adresse email :",
-      emailCopied: "Adresse email copiée !",
+      description: "Entrons en contact !",
+      sendEmail: "Envoyer Email",
+      copyEmail: "Copier Email",
+      emailCopied: "Email copié !",
     },
     footer: {
-      copyright: "© {year} Etienne Mentrel | Portfolio Cosmique",
-      madeWith: "Créé avec Next.js et une touche de magie cosmique ✨",
+      copyright: "© 2025 Yoann Yamd. Tous droits réservés.",
+      madeWith: "Fait avec ❤️ avec Next.js & Tailwind CSS",
     },
     common: {
       loading: "Chargement...",

@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cosmic Portfolio | Etienne Mentrel",
+  title: " Portfolio | Yoann Yamd",
   description:
     "An immersive space-themed portfolio experience showcasing my work through a cosmic journey",
 };
