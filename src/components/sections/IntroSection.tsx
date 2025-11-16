@@ -77,8 +77,9 @@ const IntroSection = () => {
           className="flex flex-wrap justify-center gap-4"
         >
           <button
-              className="cosmic-button flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white"
-
+            className="cosmic-button flex items-center gap-2 text-white 
+             bg-gradient-to-r from-blue-400 to-purple-500 
+             hover:opacity-90 transition-all"
             onClick={() => {
               const projectsSection = document.getElementById("projects");
               if (projectsSection) {
