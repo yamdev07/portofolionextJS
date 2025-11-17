@@ -15,11 +15,11 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-
-  // **Hydration safe**
-  const [scrollYClient, setScrollYClient] = useState<number | null>(null);
   const { t } = useLanguage();
   const [tClient, setTClient] = useState<typeof t | null>(null);
+
+  // Scroll position côté client avec useRef pour éviter les erreurs ESLint
+  const scrollYClientRef = useRef<number>(0);
 
   const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
   const lastUIUpdateTimeRef = useRef(0);
@@ -32,13 +32,13 @@ export default function Home() {
     []
   );
 
-  // **Mount côté client**
+  // Monté côté client
   useEffect(() => {
     setTClient(t); // Traductions uniquement côté client
     lastUIUpdateTimeRef.current = Date.now();
 
     const initialScrollY = window.scrollY;
-    setScrollYClient(initialScrollY);
+    scrollYClientRef.current = initialScrollY;
     lastScrollYRef.current = initialScrollY;
 
     setIsMobile(window.innerWidth < 768);
@@ -51,7 +51,7 @@ export default function Home() {
       const currentScrollY =
         window.pageYOffset || document.documentElement.scrollTop;
 
-      setScrollYClient(currentScrollY);
+      scrollYClientRef.current = currentScrollY;
 
       if (!ticking) {
         window.requestAnimationFrame(() => {
@@ -64,16 +64,15 @@ export default function Home() {
 
       scrollTimeout.current = setTimeout(() => {
         if (!isUserScrolling) {
-          // peut faire autre chose si besoin
+          // actions possibles après scroll
         }
       }, 80);
     };
 
     const handleScrollStart = () => {
       isUserScrolling = true;
-      const currentScrollY =
+      scrollYClientRef.current =
         window.pageYOffset || document.documentElement.scrollTop;
-      setScrollYClient(currentScrollY);
       if (scrollingTimeout) clearTimeout(scrollingTimeout);
     };
 
@@ -103,6 +102,7 @@ export default function Home() {
     };
   }, [t]);
 
+  // Resize
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -112,6 +112,7 @@ export default function Home() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Intersection observer pour sections
   useEffect(() => {
     const uiUpdateThreshold = 50;
     const setupIntersectionObserver = () => {
@@ -150,6 +151,7 @@ export default function Home() {
     return () => observer.disconnect();
   }, [currentSectionIndex, sections, isMobile, loading]);
 
+  // Smooth scroll
   const smoothScrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (!section) return;
@@ -175,6 +177,7 @@ export default function Home() {
     }
   };
 
+  // Loading screen
   useEffect(() => {
     const loadTimer = setTimeout(() => setLoading(false), 2000);
     document.documentElement.style.overflow = "";
@@ -215,7 +218,6 @@ export default function Home() {
                   data-section-index={idx}
                 >
                   <div className="section-content w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* ⚡ n'affiche les sections qu'après le montage */}
                     {tClient &&
                       (idx === 0
                         ? <IntroSection />
