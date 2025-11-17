@@ -123,7 +123,7 @@ export const translations: { [key: string]: Translation } = {
           demo: "https://anyxtech.com",
           featured: true,
         },
-        taskManagement: {
+        taskmanagement: {
           title: "Task Management System",
           description:
             "Client management application with Twilio API integration for notifications. Confidential production app used internally by AnyxTech.",
@@ -132,7 +132,7 @@ export const translations: { [key: string]: Translation } = {
           demo: "http://clients.anyxtech.com",
           featured: true,
         },
-        cunicultureApp: {
+        cunicultureapp: {
           title: "CunicultureApp",
           description:
             "Rabbit farm management system: track births, feeding, health and productivity.",
@@ -141,7 +141,7 @@ export const translations: { [key: string]: Translation } = {
           demo: "http://cuni.anyxtech.com",
           featured: false,
         },
-        libraryApp: {
+        libraryapp: {
           title: "Library Management",
           description:
             "Library management system with book tracking, borrow/return, users and real-time chat.",
@@ -149,7 +149,7 @@ export const translations: { [key: string]: Translation } = {
           link: "https://github.com/yamdev07/library_management_system.git",
           featured: false,
         },
-        faceVisionPro: {
+        facevisionpro: {
           title: "FaceVisionPro",
           description:
             "WebApp for facial recognition and OCR using AI technologies.",
@@ -157,7 +157,7 @@ export const translations: { [key: string]: Translation } = {
           link: "https://github.com/yamdev07/ANIPChallenge2",
           featured: false,
         },
-        quincaillerieApp: {
+        quincaillerieapp: {
           title: "QuincaillerieApp",
           description:
             "Full hardware store management system with stock, sales, invoices, and admin interface.",
