@@ -18,7 +18,6 @@ const skills: Skill[] = [
   { name: "Next.js", level: 4, category: "Frontend" },
   { name: "Tailwind CSS", level: 5, category: "Frontend" },
   { name: "Bootstrap", level: 5, category: "Frontend" },
-  { name: "UI/UX Design", level: 4, category: "Frontend" },
 
   // Backend
   { name: "PHP", level: 5, category: "Backend" },
