@@ -254,7 +254,7 @@ export const translations: { [key: string]: Translation } = {
           description:
             "Site web professionnel responsive avec design moderne, optimisé pour les performances et le SEO.",
           tech: ["HTML/CSS", "JavaScript", "Tailwind CSS"],
-          link: "https://anyxtech.com",
+          link: "https://github.com/yamdev07/Anyxtech_site.git",
           demo: "https://anyxtech.com",
           featured: true,
         },
