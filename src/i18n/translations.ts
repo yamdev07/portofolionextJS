@@ -305,8 +305,8 @@ export const translations: { [key: string]: Translation } = {
           description:
             "Portail captif pour un accès sécurisé au Wi-Fi, intégration Fedapay, gestion des sessions et authentification.",
           tech: ["Wi-Fi", "Portail Captif", "Fedapay", "Sécurité"],
-          link: "https://wifihostpo.netlify.app/",
-          demo: "https://wifihostpo.netlify.app/",
+          link: "https://github.com/yamdev07/HotspotMemYAMD.git",
+          demo: "https://memyamd.netlify.app",
           featured: false,
         },
       },
