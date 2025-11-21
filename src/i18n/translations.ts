@@ -1,3 +1,5 @@
+import { features } from "process";
+
 export interface Translation {
   navigation: {
     home: string;
@@ -174,6 +176,15 @@ export const translations: { [key: string]: Translation } = {
           demo: "https://wifihostpo.netlify.app/",
           featured: false,
         },
+        mobilemoneyapp: {
+          title: "Mobile Money App",
+          description:
+            "Web application for managing a Mobile Money wallet with user view, admin panel, daily summary, and transaction history.",
+          tech: ["Node.js", "Vue.js", "Firebase", "Express", "Tailwind CSS", "REST API"],
+          link: "https://github.com/yamdev07/mobilemoney.git",
+          demo: "", // or remove this line if no demo link
+          featured: false,
+        },
       },
     },
     skills: {
@@ -307,6 +318,14 @@ export const translations: { [key: string]: Translation } = {
           tech: ["Wi-Fi", "Portail Captif", "Fedapay", "Sécurité"],
           link: "https://github.com/yamdev07/HotspotMemYAMD.git",
           demo: "https://memyamd.netlify.app",
+          featured: false,
+        },
+        mobilemoneyapp: {
+          title: "Mobile Money App",
+          description:
+            "Application web de gestion de portefeuille Mobile Money avec fonctionnalités de vue utilisateur , admin, cumul journalier et historique des transactions.",
+          tech: ["node.js", "Vue.js", "Firebase", "Express", "Tailwind CSS", "API REST"],
+          link: "https://github.com/yamdev07/mobilemoney.git",
           featured: false,
         },
       },
