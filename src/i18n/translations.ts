@@ -123,7 +123,7 @@ export const translations: { [key: string]: Translation } = {
           tech: ["HTML/CSS", "JavaScript", "Tailwind CSS"],
           link: "https://anyxtech.com",
           demo: "https://anyxtech.com",
-          featured: true,
+          featured: false,
         },
         taskmanagement: {
           title: "Task Management System",
@@ -165,7 +165,7 @@ export const translations: { [key: string]: Translation } = {
             "Full hardware store management system with stock, sales, invoices, and admin interface.",
           tech: ["Laravel", "Billing", "Bootstrap", "MySQL"],
           link: "https://github.com/yamdev07/quincaillerieApp",
-          featured: false,
+          featured: true,
         },
         wifizone: {
           title: "Wifizone Captive Portal",
@@ -267,7 +267,7 @@ export const translations: { [key: string]: Translation } = {
           tech: ["HTML/CSS", "JavaScript", "Tailwind CSS"],
           link: "https://github.com/yamdev07/Anyxtech_site.git",
           demo: "https://anyxtech.com",
-          featured: true,
+          featured: false,
         },
         taskManagement: {
           title: "Task Management System",
@@ -309,7 +309,7 @@ export const translations: { [key: string]: Translation } = {
             "Application complète de gestion de quincaillerie avec stock, ventes, factures et interface administrateur.",
           tech: ["Laravel", "Billing", "Bootstrap", "MySQL"],
           link: "https://github.com/yamdev07/quincaillerieApp",
-          featured: false,
+          featured: true,
         },
         wifizone: {
           title: "Wifizone - Portail Captif",
