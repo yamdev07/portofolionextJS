@@ -1,4 +1,4 @@
-import { features } from "process";
+
 
 export interface Translation {
   navigation: {
