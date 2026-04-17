@@ -165,6 +165,7 @@ export const translations: { [key: string]: Translation } = {
             "Full hardware store management system with stock, sales, invoices, and admin interface.",
           tech: ["Laravel", "Billing", "Bootstrap", "MySQL"],
           link: "https://github.com/yamdev07/quincaillerieApp",
+          demo: "https://yamdev07.alwaysdata.net",
           featured: true,
         },
         wifizone: {
@@ -309,6 +310,7 @@ export const translations: { [key: string]: Translation } = {
             "Application complète de gestion de quincaillerie avec stock, ventes, factures et interface administrateur.",
           tech: ["Laravel", "Billing", "Bootstrap", "MySQL"],
           link: "https://github.com/yamdev07/quincaillerieApp",
+          demo: "https://yamdev07.alwaysdata.net",
           featured: true,
         },
         wifizone: {

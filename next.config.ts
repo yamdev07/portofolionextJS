@@ -8,4 +8,4 @@ const nextConfig = {
   trailingSlash: true,  // Ajoutez ceci si vous avez des problèmes de routes
 };
 
-module.exports = nextConfig;
+module.exports = nextConfig; 
