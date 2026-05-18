@@ -107,13 +107,13 @@ export const translations: { [key: string]: Translation } = {
       featured: "Featured",
       projectsList: {
         moradaLodge: {
-          title: "MoradaLodge",
+          title: "HotelManagement",
           description:
-            "Hotel website fully configured with QloApps, including a back-office to manage bookings, rooms and content.",
-          tech: ["QloApps", "PHP", "MySQL", "Back-office"],
-          link: "https://github.com/yamdev07/MoradalodgeSite.git",
-          demo: "https://moradalodge.com",
-          extraButton: { label: "Back Office", url: "https://moradalodge.com/admin2025" },
+            "Complete hotel management application integrating reservations, payments, room management, housekeeping staff tracking, roles and permissions, as well as activity logs, combined with a live showcase website already deployed in production within hotels.",
+          tech: ["Laravel", "PHP", "MySQL", "Docker", "Fedapay"],
+          link: "https://github.com/yamdev07/HotelManagement.git",
+          demo: "https://lecactushotel.bj",
+          extraButton: { label: "Back Office", url: "https://lecactushotel.bj/login" },
           featured: true,
         },
         anyxTech: {
@@ -252,13 +252,13 @@ export const translations: { [key: string]: Translation } = {
       featured: "À la Une",
       projectsList: {
         moradaLodge: {
-          title: "MoradaLodge",
+          title: "App Gestion D'Hotel",
           description:
-            "Site web d'hôtel entièrement configuré avec QloApps, incluant un back-office pour gérer les réservations, les chambres et le contenu du site.",
-          tech: ["QloApps", "PHP", "MySQL", "Back-office"],
-          link: "https://github.com/yamdev07/MoradalodgeSite.git",
-          demo: "https://moradalodge.com",
-          extraButton: { label: "Back Office", url: "https://moradalodge.com/admin2025" },
+            "Application complète de gestion hôtelière intégrant les réservations, les paiements, la gestion des chambres, le suivi des femmes de chambre, les rôles et permissions, ainsi que les journaux d’activité (logs), accompagnée d’un site vitrine en ligne et déjà déployée en production dans des hôtels.",
+          tech: ["Laravel", "PHP", "MySQL", "Docker", "FedaPay"],
+          link: "https://github.com/yamdev07/HotelManagement.git",
+          demo: "https://lecactushotel.bj",
+          extraButton: { label: "Back Office", url: "https://lecactushotel.bj/login" },
           featured: true,
         },
         anyxTech: {
