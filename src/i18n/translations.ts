@@ -160,7 +160,7 @@ export const translations: { [key: string]: Translation } = {
           featured: false,
         },
         quincaillerieapp: {
-          title: "QuincaillerieApp",
+          title: "Sellvantix SaaS",
           description:
             "Full hardware store management system with stock, sales, invoices, and admin interface.",
           tech: ["Laravel", "Billing", "Bootstrap", "MySQL"],
@@ -305,7 +305,7 @@ export const translations: { [key: string]: Translation } = {
           featured: false,
         },
         quincaillerieApp: {
-          title: "QuincaillerieApp",
+          title: "Sellvantix SaaS",
           description:
             "Application complète de gestion de quincaillerie avec stock, ventes, factures et interface administrateur.",
           tech: ["Laravel", "Billing", "Bootstrap", "MySQL"],
