@@ -113,7 +113,7 @@ export const translations: { [key: string]: Translation } = {
           tech: ["Laravel", "PHP", "MySQL", "Docker", "Fedapay"],
           link: "https://github.com/yamdev07/HotelManagement.git",
           demo: "https://demo.anyxtech.com",
-          extraButton: { label: "Back Office", url: "https://lecactushotel.bj/login" },
+          extraButton: { label: "Back Office", url: "https://demo.anyxtech.com/login" },
           featured: true,
         },
         anyxTech: {
@@ -258,7 +258,7 @@ export const translations: { [key: string]: Translation } = {
           tech: ["Laravel", "PHP", "MySQL", "Docker", "FedaPay"],
           link: "https://github.com/yamdev07/HotelManagement.git",
           demo: "https://demo.anyxtech.com",
-          extraButton: { label: "Back Office", url: "https://lecactushotel.bj/login" },
+          extraButton: { label: "Back Office", url: "https://demo.anyxtech.com/login" },
           featured: true,
         },
         anyxTech: {
