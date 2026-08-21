@@ -60,7 +60,7 @@ const AboutSection = () => {
 
           <div className="mt-8 flex gap-4 flex-wrap">
             <a
-              href="https://cvdesignr.com/p/668be84f74319"
+              href="/cv.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="cosmic-button flex items-center gap-2"
